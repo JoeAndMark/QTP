@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/introduce_icon.png</file>
+        <file>resources/moon_icon.png</file>
+        <file>resources/rank_icon.png</file>
+    </qresource>
+</RCC>

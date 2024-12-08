@@ -17,6 +17,20 @@ public:
     ~MainWindow();
 
 private:
-    Ui::MainWindow *ui;
+    void updatePaletteColor(QWidget* widget, const QPalette& palette);
+
+public:
+    /*!
+     * @brief UI 界面的显示模式，日间模式或夜间模式
+     */
+    enum class Mode {
+        DayMode,
+        NightMode,
+    };
+
+private:
+    Ui::MainWindow *ui_ptr_;
+
+    Mode ui_mode_;
 };
 #endif // MAINWINDOW_H

@@ -28,11 +28,11 @@
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
-  <widget class="QLabel" name="GameTitleLabel">
+  <widget class="QLabel" name="title_label">
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>180</y>
+     <y>190</y>
      <width>400</width>
      <height>200</height>
     </rect>
@@ -56,13 +56,13 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QWidget" name="mainSceneBtnWidget" native="true">
+  <widget class="QWidget" name="button_widget" native="true">
    <property name="geometry">
     <rect>
      <x>300</x>
      <y>479</y>
-     <width>200</width>
-     <height>301</height>
+     <width>157</width>
+     <height>212</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -73,7 +73,7 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="startGameBtn">
+     <widget class="QPushButton" name="start_button">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -92,7 +92,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="loadGameBtn">
+     <widget class="QPushButton" name="continue_button">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -111,7 +111,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="settingBtn">
+     <widget class="QPushButton" name="setting_button">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -130,7 +130,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="exitBtn">
+     <widget class="QPushButton" name="exit_button">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -150,7 +150,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QToolButton" name="introBtn">
+  <widget class="QToolButton" name="introduce_button">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -166,10 +166,10 @@
     </font>
    </property>
    <property name="text">
-    <string>...</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QToolButton" name="rankBtn">
+  <widget class="QToolButton" name="rank_button">
    <property name="geometry">
     <rect>
      <x>690</x>
@@ -188,7 +188,7 @@
     <string>...</string>
    </property>
   </widget>
-  <widget class="QToolButton" name="moonBtn">
+  <widget class="QToolButton" name="switch_mode_button">
    <property name="geometry">
     <rect>
      <x>690</x>

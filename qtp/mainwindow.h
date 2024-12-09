@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "gamewindow.h"
+
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -32,5 +34,7 @@ private:
     Ui::MainWindow *ui_ptr_;
 
     Mode ui_mode_;
+
+    GameWindow* game_window_ptr_;
 };
 #endif // MAINWINDOW_H

@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "gamewindow.h"
 
 #include <QMessageBox>
 #include <QDebug>
@@ -15,7 +16,8 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui_ptr_(new Ui::MainWindow)
-    , ui_mode_(Mode::DayMode) {
+    , ui_mode_(Mode::DayMode)
+    , game_window_ptr_(nullptr) {
         ui_ptr_->setupUi(this);
 
         setWindowTitle("QTP");
@@ -29,6 +31,8 @@ MainWindow::MainWindow(QWidget *parent)
 
         ui_ptr_->switch_mode_button->setIcon(QIcon(":/resources/moon_icon.png"));
         ui_ptr_->switch_mode_button->setIconSize(QSize(60, 60));
+
+        game_window_ptr_ = new GameWindow(nullptr); // 创建游戏界面，但不将其绑定到当前界面的对象树上
 
         connect(ui_ptr_->introduce_button, &QPushButton::clicked, [=]() {
             qDebug() << "用户点击简介按键";
@@ -72,6 +76,11 @@ MainWindow::MainWindow(QWidget *parent)
         connect(ui_ptr_->start_button, &QPushButton::clicked, [this]() {
             Q_UNUSED(this);
             qDebug() << "用户点击开始游戏按钮";
+
+            game_window_ptr_->move(pos());
+            game_window_ptr_->show();
+            hide();
+
         });
 
         connect(ui_ptr_->continue_button, &QPushButton::clicked, [this]() {

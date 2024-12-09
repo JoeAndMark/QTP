@@ -16,19 +16,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    coloroptionblock.cpp \
     gamewindow.cpp \
+    keyoptionblock.cpp \
     main.cpp \
     mainwindow.cpp \
+    optionblock.cpp \
+    settingwindow.cpp \
     tetromino.cpp
 
 HEADERS += \
+    coloroptionblock.h \
     gamewindow.h \
+    keyoptionblock.h \
     mainwindow.h \
+    optionblock.h \
+    settingwindow.h \
     tetromino.h
 
 FORMS += \
+    coloroptionblock.ui \
     gamewindow.ui \
-    mainwindow.ui
+    keyoptionblock.ui \
+    mainwindow.ui \
+    optionblock.ui \
+    settingwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

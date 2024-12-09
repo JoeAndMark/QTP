@@ -18,11 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     gamewindow.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    tetromino.cpp
 
 HEADERS += \
     gamewindow.h \
-    mainwindow.h
+    mainwindow.h \
+    tetromino.h
 
 FORMS += \
     gamewindow.ui \

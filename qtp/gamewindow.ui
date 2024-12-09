@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>GameWindow</class>
  <widget class="QWidget" name="GameWindow">
   <property name="geometry">
@@ -27,7 +25,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QGraphicsView" name="gameGraphicsView">
+  <widget class="QGraphicsView" name="board_view">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -37,7 +35,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QGraphicsView" name="nextBlockGraphicsView">
+  <widget class="QGraphicsView" name="preview_view">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -47,7 +45,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QWidget" name="scoreWidget" native="true">
+  <widget class="QWidget" name="score_widget" native="true">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -58,7 +56,7 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="scoreLabel">
+     <widget class="QLabel" name="score_label">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -77,7 +75,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLCDNumber" name="scoreLCD">
+     <widget class="QLCDNumber" name="score_lcd">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -88,7 +86,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="backBtn">
+  <widget class="QPushButton" name="back_button">
    <property name="geometry">
     <rect>
      <x>550</x>
@@ -107,7 +105,7 @@
     <string>返回</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="restart_btn">
+  <widget class="QPushButton" name="start_restart_button">
    <property name="geometry">
     <rect>
      <x>550</x>
@@ -126,7 +124,7 @@
     <string>开始</string>
    </property>
   </widget>
-  <widget class="QLabel" name="pauseLabel">
+  <widget class="QLabel" name="pasue_label">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -162,10 +160,10 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QWidget" name="scoreWidget_2" native="true">
+     <widget class="QWidget" name="music_widget" native="true">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLabel" name="musicLabel">
+        <widget class="QLabel" name="music_label">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -187,7 +185,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="musicBtn">
+        <widget class="QPushButton" name="music_button">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -215,7 +213,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QSlider" name="musicSlider">
+     <widget class="QSlider" name="music_slider">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
         <horstretch>0</horstretch>

@@ -17,7 +17,8 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui_ptr_(new Ui::MainWindow)
     , ui_mode_(Mode::DayMode)
-    , game_window_ptr_(nullptr) {
+    , game_window_ptr_(nullptr)
+    , setting_window_ptr_(new SettingWindow(nullptr)) {
         ui_ptr_->setupUi(this);
 
         setWindowTitle("QTP");
@@ -91,6 +92,10 @@ MainWindow::MainWindow(QWidget *parent)
         connect(ui_ptr_->setting_button, &QPushButton::clicked, [this]() {
             Q_UNUSED(this);
             qDebug() << "用户点击设置按钮";
+
+            setting_window_ptr_->move(pos());
+            setting_window_ptr_->show();
+            hide();
         });
 
         connect(ui_ptr_->rank_button, &QPushButton::clicked, [this]() {
@@ -104,7 +109,6 @@ MainWindow::MainWindow(QWidget *parent)
         });
     }
 
-
 /*!
  * @brief 主界面的析构函数
  *
@@ -113,6 +117,8 @@ MainWindow::MainWindow(QWidget *parent)
  */
 MainWindow::~MainWindow() {
     delete ui_ptr_;
+    delete game_window_ptr_;
+    delete setting_window_ptr_;
 }
 
 

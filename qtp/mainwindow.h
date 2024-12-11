@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include "gamewindow.h"
+#include "settingwindow.h"
 
 #include <QMainWindow>
 
@@ -36,5 +37,6 @@ private:
     Mode ui_mode_;
 
     GameWindow* game_window_ptr_;
+    SettingWindow* setting_window_ptr_;
 };
 #endif // MAINWINDOW_H
